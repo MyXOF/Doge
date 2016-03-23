@@ -1,0 +1,41 @@
+#logo-name a:hover{
+    color: orange;
+}
+
+.light{
+    display: block;
+}
+
+.dark{
+    display: none;
+}
+
+#header .slogan{
+	font-size: 4em;
+    margin-top: 15px;
+	margin-bottom: 15px;
+	line-height: 1em;
+	font-family: 'Nixie One';
+	color: white;
+}
+
+#header .secondary-slogan{
+	font-size: 1.6em;
+	color: rgba(255,255,255,.5);
+	line-height: 1em;
+	font-family: 'Alegreya SC';
+}
+
+
+
+#header {
+	background-image: url(../img/index-bg.jpg);
+}
+
+.logo-cube {
+    margin: 0 auto;
+    -webkit-filter: drop-shadow(30px 30px 23px rgba(0,0,0,0.3));
+    -moz-filter: drop-shadow(30px 30px 23px rgba(0,0,0,0.3));
+    filter: drop-shadow(30px 30px 23px rgba(0,0,0,0.3));
+}
+
