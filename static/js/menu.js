@@ -2,16 +2,14 @@
  * Created by xuyi on 9/29/15.
  */
 
-var LANG_URL = "http://myxof.github.io/static/lang/";
 
-var langDefault = "zh";
-
-var lang_menu = false;
 
 jQuery(document).ready(function(){
-    langDefault = "zh";
-    setLanguage(langDefault);
+    var LANG_URL = "http://myxof.github.io/static/lang/";
+    var langDefault = "zh";
+    var lang_menu = false;
 
+    setLanguage(langDefault);
 
     jQuery("#menu-list").bind("click",function(){
         hideLanguageOption();
@@ -48,33 +46,35 @@ jQuery(document).ready(function(){
         setLanguage("en");
         hideLanguageOption();
     });
+
+
+    function setLanguage(lang){
+        var page = jQuery("body")[0].id;
+        setLanuage("menu",lang);
+        setLanuage(page,lang);
+        langDefault = lang;
+    }
+
+    function setLanuage(part,lang){
+        jQuery.ajax({
+            type:"get",
+            dataType:"json",
+            url: LANG_URL + part +"-"+lang+".json",
+            success:function(msg){
+                var itemList = eval(msg).lang[0];
+                jQuery(".lang-"+part+"-content").each(function(){
+                    this.innerText = itemList[this.id];
+                });
+            }
+        });
+
+    }
+
+    function hideLanguageOption(){
+        if(lang_menu){
+            jQuery(".lang-option").fadeOut();
+            lang_menu = false;
+        }
+    }
 });
 
-function setLanguage(lang){
-    var page = jQuery("body")[0].id;
-    setLanuage("menu",lang);
-    setLanuage(page,lang);
-    langDefault = lang;
-}
-
-function setLanuage(part,lang){
-    jQuery.ajax({
-        type:"get",
-        dataType:"json",
-        url: LANG_URL + part +"-"+lang+".json",
-        success:function(msg){
-            var itemList = eval(msg).lang[0];
-            jQuery(".lang-"+part+"-content").each(function(){
-                this.innerText = itemList[this.id];
-            });
-        }
-    });
-
-}
-
-function hideLanguageOption(){
-    if(lang_menu){
-        jQuery(".lang-option").fadeOut();
-        lang_menu = false;
-    }
-}
