@@ -13,8 +13,6 @@ html {
     overflow-y: scroll;
 }
 
-p {margin: 0 0 20px 0;	}
-
 img {max-width: 100%;}
 
 a{
@@ -40,6 +38,18 @@ h1, h2, h3, h4, h5, h6{
     font-family: 'Alegreya Sans';
 }
 
+.content-block{
+    background:transparent no-repeat center center fixed;
+    -webkit-background-size:100%;
+    -moz-background-size:100%;
+    -o-background-size:100%;
+    background-size:100%;
+    background-size:cover;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    overflow:hidden;
+}
 
 .btn-o {
     border: 1px solid #3A4F52;
@@ -54,6 +64,10 @@ h1, h2, h3, h4, h5, h6{
 .btn.btn-o-white:hover {
     background: white;
     color: #6a6a6a;
+}
+
+#logo-name a:hover{
+    color: orange;
 }
 
 
@@ -130,21 +144,16 @@ h1, h2, h3, h4, h5, h6{
     font-size: 1.3em;
 }
 
+/*////////////////////////////////////////////////////////////////////////
+//  Footer
+///////////////////////////////////////////////////////////////////////*/
 
-.content-block{
-    background:transparent no-repeat center center fixed;
-    -webkit-background-size:100%;
-    -moz-background-size:100%;
-    -o-background-size:100%;
-    background-size:100%;
-    background-size:cover;
-    -webkit-background-size:cover;
-    -moz-background-size:cover;
-    -o-background-size:cover;
-    overflow:hidden;
-    padding: 60px 0;
-}
+#footer{ background: #2B3E51; color: white;}
 
+
+/*////////////////////////////////////////////////////////////////////////
+//  Responsive styles
+///////////////////////////////////////////////////////////////////////*/
 
 @media (max-width: 660px) {
     #drawer-right {

@@ -1,3 +1,12 @@
+body {
+    color: #6a6a6a;
+    background: #f1f0f0;
+}
+
+.lang-resume-page-content{
+    font-family:"Microsoft YaHei","Arial", "黑体","宋体",sans-serif;
+}
+
 #header .top {
     position:fixed;
     top:0;
@@ -10,7 +19,7 @@
     -moz-transition: all .5s;
     -webkit-transition: all .5s;
     transition: all .5s;
-    background: rgb(39,61,82);
+    background: rgba(39,61,82,0.9);
 }
 
 #header .top.solid {
@@ -18,7 +27,6 @@
     padding-top: 15px;
     padding-bottom: 15px;
 }
-
 
 #drawer-right {
     position: fixed;
@@ -32,29 +40,22 @@
     z-index: 999;
 }
 
-.block-body {
-    margin-top: 10px;
-}
-
 .btn-o:hover {
     background: #3A4F52;
     color: white;
 }
 
-.content-block{
-    background:transparent no-repeat center center fixed;
-    -webkit-background-size:100%;
-    -moz-background-size:100%;
-    -o-background-size:100%;
-    background-size:100%;
-    background-size:cover;
-    -webkit-background-size:cover;
-    -moz-background-size:cover;
-    -o-background-size:cover;
-    overflow:hidden;
-    padding-top: 100px;
-    padding-bottom: 20px;
+#portfolio{
+    padding-top: 50px;
 }
+
+#footer{
+    padding: 20px 0px;
+}
+
+/*////////////////////////////////////////////////////////////////////////
+//  Recent works
+///////////////////////////////////////////////////////////////////////*/
 
 .recent-work {
     width: 100%;
@@ -100,12 +101,35 @@
     opacity: 1;
 }
 
-.lang-resume-page-content{
-    font-family:"Microsoft YaHei","Arial", "黑体","宋体",sans-serif;
+/*////////////////////////////////////////////////////////////////////////
+//   Testimonials
+///////////////////////////////////////////////////////////////////////*/
+
+#testimonials{
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+#testimonials .testimonial > img {
+    border-radius: 100%;
+    margin-bottom: 15px;
+}
+#testimonials .testimonial {
+    padding: 25px;
 }
 
-#logo-name a:hover{
-    color: orange;
+#job,#self-info{
+    font-size: 1.3em;
+}
+
+@media (min-width: 992px) {
+    #self-intro{
+        padding-top: 85px;
+    }
+
+    #self-info{
+        padding-top: 70px;
+    }
 }
 
 @media (max-width: 767px){
